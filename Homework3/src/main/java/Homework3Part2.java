@@ -9,7 +9,7 @@ public class Homework3Part2 {
         ArrayList<Integer> list = new ArrayList<>();
         Random rnd = new Random();
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 5; i++) {
 
             list.add(rnd.nextInt(50));
 
@@ -19,18 +19,22 @@ public class Homework3Part2 {
 
         int max = list.get(0);
         int min = list.get(0);
-        int middle = list.get(0);
+        double middle = 0;
 
         for (int i = 0; i < list.size(); i++){
+
             if (list.get(i) > max)
                 max = list.get(i);
+
             else if (list.get(i) < min)
                 min = list.get(i);
 
+            middle += list.get(i);
 
         }
+
+        middle /= list.size();
+
         System.out.println("max = " + max + "\nmin = " + min + "\nmiddle = " + middle);
-
-
     }
 }
